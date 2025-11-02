@@ -1,5 +1,6 @@
 import pytest
 
+
 class TestImports:
     """Test suite to verify all hw5lib modules can be imported successfully."""
     
