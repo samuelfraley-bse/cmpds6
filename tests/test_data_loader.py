@@ -1,29 +1,29 @@
+import pytest
 
-# Test each import one by one
-print("Testing data.py...")
-try:
-    from hw5lib.data import DataLoader
-    print("✓ data.py works")
-except Exception as e:
-    print(f"✗ data.py failed: {e}")
+class TestImports:
+    """Test suite to verify all hw5lib modules can be imported successfully."""
+    
+    def test_data_module_import(self):
+        """Test that data.py module imports successfully."""
+        from hw5lib.data import DataLoader
+        assert DataLoader is not None, "DataLoader class should be importable"
+    
+    def test_preprocess_module_import(self):
+        """Test that preprocess.py module imports successfully."""
+        from hw5lib.preprocess import NaNRowRemover
+        assert NaNRowRemover is not None, "NaNRowRemover class should be importable"
+    
+    def test_features_module_import(self):
+        """Test that features.py module imports successfully."""
+        from hw5lib.features import BMICalculator
+        assert BMICalculator is not None, "BMICalculator class should be importable"
+    
+    def test_model_module_import(self):
+        """Test that model.py module imports successfully."""
+        from hw5lib.model import DiabetesModel
+        assert DiabetesModel is not None, "DiabetesModel class should be importable"
 
-print("\nTesting preprocess.py...")
-try:
-    from hw5lib.preprocess import NaNRowRemover
-    print("✓ preprocess.py works")
-except Exception as e:
-    print(f"✗ preprocess.py failed: {e}")
 
-print("\nTesting features.py...")
-try:
-    from hw5lib.features import BMICalculator
-    print("✓ features.py works")
-except Exception as e:
-    print(f"✗ features.py failed: {e}")
-
-print("\nTesting model.py...")
-try:
-    from hw5lib.model import DiabetesModel
-    print("✓ model.py works")
-except Exception as e:
-    print(f"✗ model.py failed: {e}")
+if __name__ == "__main__":
+    # Run tests with pytest
+    pytest.main([__file__, "-v"])
