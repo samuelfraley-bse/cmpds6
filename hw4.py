@@ -12,7 +12,7 @@ from functools import reduce
 
 def count_simba(sentences):
     counts = map(lambda s: s.count("Simba"), sentences)
-    total = reduce(lambda a, b: a + b, counts)
+    total = reduce(lambda a, b: a + b, counts, 0)
     return total
 
 """
