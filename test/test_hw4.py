@@ -88,10 +88,9 @@ def test_sum_general_int_list_simple():
     lst = [1, 2, 3, 4]
     assert sum_general_int_list(lst) == 10
 
-
 def test_sum_general_int_list_nested():
     lst = [[2], 4, 5, [1, [2], [3, 5, [7, 8]]], 1]
-    assert sum_general_int_list(lst) == 37
+    assert sum_general_int_list(lst) == 38
 
 
 def test_sum_general_int_list_deeply_nested():

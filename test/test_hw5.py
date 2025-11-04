@@ -15,25 +15,6 @@ import pytest
 
 from hw5 import Card, Circle, Deck, Patient, PlaneFigure, Rectangle, Triangle
 
-# run the tests in terminal with: pytest test/test_hw5.py -v
-# run test coverage with:
-#                          pip install pytest-cov
-#                          pytest test/test_hw5.py --cov=hw5
-
-# ========================================================== tests coverage ===========================================================
-# _________________________________________ coverage: platform darwin, python 3.13.0-final-0 __________________________________________
-
-# Name     Stmts   Miss  Cover
-# ----------------------------
-# hw5.py      74      2    97%
-# ----------------------------
-# TOTAL       74      2    97%
-
-# ============================================================================
-# EXERCISE 1: Patient Class Tests
-# ============================================================================
-
-
 class TestPatient:
     """Test suite for the Patient class"""
 
@@ -157,10 +138,7 @@ class TestPatient:
         assert patient.has_covid() == 0.01  # Test result takes priority
 
 
-# ============================================================================
-# EXERCISE 2: Card and Deck Classes Tests
-# ============================================================================
-
+#question2
 
 class TestCard:
     """Test suite for the Card class"""
@@ -314,10 +292,7 @@ class TestDeck:
         assert card is None
 
 
-# ============================================================================
-# EXERCISE 3: PlaneFigure Classes Tests
-# ============================================================================
-
+#question 3
 
 class TestPlaneFigure:
     """Test suite for the abstract PlaneFigure class"""
@@ -424,11 +399,6 @@ class TestCircle:
         circle = Circle(radius=3)
 
         assert isinstance(circle, PlaneFigure)
-
-
-# ============================================================================
-# POLYMORPHISM TESTS
-# ============================================================================
 
 
 class TestPolymorphism:
